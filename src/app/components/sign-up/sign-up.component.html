@@ -1,0 +1,49 @@
+<div class="displayTable">
+    <div class="displayTableCell">
+  
+      <div class="authBlock">
+        <div class="logo">
+          <img class="img-responsive" src="../../../assets/img/angulartube.png" alt="logo">
+        </div>
+        
+        <h3>REGISTRAR-SE</h3>
+  
+        <div class="formGroup">
+          <input type="email" class="formControl" placeholder="Digite um e-mail válido" #userEmail required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Digite a senha de sua escolha" #userPwd required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="button" class="btn btnPrimary" value="REGISTRAR" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+        </div>
+  
+        <div class="formGroup">
+          <span class="or"><span class="orInner">OU</span></span>
+        </div>
+  
+        <!-- Continue with Google -->
+        <div class="formGroup">
+          <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+            <i class="fab fa-google-plus-g"></i>
+            Continue com o Google
+          </button>
+        </div>
+  
+        <!-- Continue with Facebook -->
+        <div class="formGroup">
+          <button type="button" class="btn facebookBtn" (click)="authService.FacebookAuth()">
+            <i class="fab fa-facebook"></i>
+            Continue com o Facebook
+          </button>
+        </div>
+      </div>
+  
+      <div class="redirectToLogin">
+        <span>Já está registrado? <span class="redirect" routerLink="/sign-in">ACESSAR</span></span>
+      </div>
+    </div>
+  
+  </div>
