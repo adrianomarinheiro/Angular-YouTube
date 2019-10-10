@@ -31,10 +31,15 @@ h6 {
   font-weight: 600;
 }
 
+.media {
+  align-items: center;
+}
 
 .media-body h1 {
+  font-size: 17px;
   font-weight: 300;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .media-body h1 strong {
@@ -261,6 +266,8 @@ input:-moz-placeholder {
   position: fixed;
   top: 70px;
   bottom: 0;
+  color: #ffffff;
+  background-color: #424242;
   left: 0;
   z-index: 100;
   /* Behind the navbar */
@@ -288,6 +295,7 @@ input:-moz-placeholder {
 .sidebar .nav-link {
   font-weight: 500;
   color: #333;
+  text-transform: uppercase;
 }
 
 .sidebar .nav-link .feather {
@@ -310,8 +318,8 @@ input:-moz-placeholder {
 .sidebar a:hover,
 a:not([href]):not([tabindex]):focus,
 a:not([href]):not([tabindex]):hover {
-  color: #E91E63;
-  background: #efefef;
+  color: #bb0000;
+  background: #bdbdbd;
 }
 
 /* * Content */
@@ -329,6 +337,7 @@ a:not([href]):not([tabindex]):hover {
   margin-left: 15px;
   position: relative;
   top: -1px;
+  text-transform: uppercase;
 }
 
 /* * Navbar */
@@ -454,11 +463,11 @@ body .navbar-brand {
 
 .pt-3,
 .py-3 {
-  padding-top: 2.4rem !important;
+  padding-top: 1.4rem !important;
 }
 
 .sidebar-sticky {
-  padding-top: 1.9rem !important;
+  padding-top: 1.8rem !important;
 }
 
 /* Form */
@@ -574,7 +583,7 @@ body .table thead th {
 }
 
 .rounded-circle {
-  max-width: 150px;
+  max-width: 100px;
 }
 
 /* Responsive */
@@ -608,6 +617,7 @@ body .table thead th {
     max-width: 50%;
     margin: 0 auto;
     display: block;
+    height: -wenkit-fill-available;
   }
 
   .dasboard-text {
@@ -673,7 +683,7 @@ body .table thead th {
   }
 
   .rounded-circle {
-    max-width: 150px;
+    max-width: 100px;
     margin: 0 auto 20px !important;
     display: block;
   }
