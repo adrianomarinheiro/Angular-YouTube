@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 // Required services for navigation
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,6 +9,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SearchComponent } from './components/search/search.component'
+import { VideoComponent } from './components/video/video.component';
 
 // Import canActivate guard services
 import { AuthGuard } from "./shared/guard/auth.guard";
@@ -21,8 +23,13 @@ const routes: Routes = [
   { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard]},
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'header', component: HeaderComponent, canActivate: [AuthGuard] },
+  { path: 'app-search', component: SearchComponent, canActivate: [AuthGuard] },
+  { path: 'app-video', component: VideoComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] }
+  { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
+  {path:'', component:SearchComponent, canActivate: [SecureInnerPagesGuard] },
+  {path:'video/:id', component:VideoComponent, canActivate: [AuthGuard] },
+  {path: '**', component:SearchComponent, canActivate: [SecureInnerPagesGuard]},
 ];
 
 @NgModule({
@@ -31,3 +38,5 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule { }
+export const appRoutingProviders: any[] = [];
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

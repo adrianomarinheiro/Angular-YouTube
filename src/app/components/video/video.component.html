@@ -1,0 +1,53 @@
+<div>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <span class="navbar-brand col-sm-3 col-md-2 mr-0" >
+            <img class="brand-logo"     src="../../../assets/img/angulartube.png" alt="positronX.io Logo">
+            <span class="dasboard-text">Top 5</span>
+        </span>
+        <div class="back">
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0" routerLink="/dashboard">
+                <i class="fas fa-chevron-circle-left"></i>Voltar
+            </a>
+        </div>            
+    </nav>
+</div>
+<div class="reproduz col-md-12">
+    <div class="video-detail col-md-9">
+            <strong class="card-title">{{ video.snippet.title }}</strong>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" [src]="video.id | domseguro:'https://youtube.com/embed/'"></iframe>
+        </div>
+    
+        <div class="card w-100" >
+            <div class="card-body">
+             
+              <h6 class="card-title">{{ video.snippet.channelTitle }}</h6>
+              <p class="card-text">{{ video.snippet.description }}</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="col-md-3 list-group">
+        <div>
+            <h4 class="sugestoes">Sugestões</h4>
+        </div>
+        <ul >
+            <li class="list-group-item" *ngFor="let video of recomend;">
+                <div class="video-list media" [routerLink]="['/video', video.id.videoId ]">
+                    <div class="media-left">
+                        <img class="media-object" [src]="video.snippet.thumbnails.default.url"/>
+                    </div>
+        
+                    <div class="media-body">
+                        <div class="media-heading">
+                            {{ video.snippet.title }}
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
