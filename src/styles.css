@@ -642,6 +642,16 @@ body .table thead th {
   -webkit-text-stroke-color: #fff;
 }
 
+.tutorial{
+  display: none;
+}
+
+.tutorial p{
+  font-size: 12px;
+}
+.tutorial img{
+  max-width: 3vw;
+}
 
 /* Responsive */
 @media(max-width:767px) {
@@ -790,5 +800,14 @@ body .table thead th {
 
   .px-logo {
     display: none;
+  }
+
+  .tutorial{
+    display: block;
+    text-align: justify;
+    border-top: 1px solid #424242;
+    padding-top: 15px;
+    line-height: normal;
+    
   }
 }
