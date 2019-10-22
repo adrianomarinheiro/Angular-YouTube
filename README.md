@@ -1,28 +1,39 @@
 # AngularYoutube
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 8.3.6.
 
-## Development server
+## CASO DESEJE RODAR ESSE PROJETO EM SUA MÁQUINA DESDE O REPOSITÓRIO
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Clique no botão verde à direita logo no ínicio desta página e copie o endereço do repositório.
 
-## Code scaffolding
+- No Terminal de comando de sua máquina rode o seguinte comando: $git clone "ENDEREÇO DO REPOSITÓRIO";
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Em seguida acesse a pasta local do projeto digitando cd "NOME DA PASTA" ;
 
-## Build
+- Então, dentro do repositório local do projeto, rode o comando $npm install ;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Próximo passo é digitar no terminal de comando o seguinte comando `ng serve` . Acesse o endereço `http://localhost:4200/` no seu browser de preferência. Isso abrirá o app no seu servidor local. todas as alterações realizadas no código serão automaticamente atualizadas nesse endereço após serem salvas.
 
-## Running unit tests
+## CASO ENFRENTE PROBLEMAS COM O COMANDO NG SERVE
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- SE O SEGUINTE COMANDO APARECER:
 
-## Running end-to-end tests
+bash: ng: command not found
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Você deverá rodar o seguinte comando: 
 
-## Further help
+$ alias ng="/Users/adrianomendesmarinheiro/.npm-global/bin/ng";
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Após digitar esse comando volte a digitar o comando ng serve e o servidor iniciará sem maiores problemas.
+
+## PARA REALIZAR O BUILD
+
+No terminal, dentro do repositório local do projeto, rode o comando `ng build` para "buildar" o projeto. Os arquivos resultantes da build estarão armazenados no diretório `dist/` .
+
+## Este projeto está disponível no seguinte endereço:
+
+
+
+## OBRIGADO POR VISITAR O PROJETO
+
 # Angular-YouTube

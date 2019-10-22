@@ -11,6 +11,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component'
 import { VideoComponent } from './components/video/video.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 // Import canActivate guard services
 import { AuthGuard } from "./shared/guard/auth.guard";
@@ -18,18 +19,18 @@ import { SecureInnerPagesGuard } from "./shared/guard/secure-inner-pages.guard";
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/sign-in', pathMatch: 'full'},
-  { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard]},
-  { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard]},
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'header', component: HeaderComponent, canActivate: [AuthGuard] },
   { path: 'app-search', component: SearchComponent, canActivate: [AuthGuard] },
   { path: 'app-video', component: VideoComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
-  {path:'', component:SearchComponent, canActivate: [SecureInnerPagesGuard] },
-  {path:'video/:id', component:VideoComponent, canActivate: [AuthGuard] },
-  {path: '**', component:SearchComponent, canActivate: [SecureInnerPagesGuard]},
+  { path: '', component: SearchComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'video/:id', component: VideoComponent, canActivate: [AuthGuard] },
+  { path: '**', component: NotfoundComponent, canActivate: [SecureInnerPagesGuard] },
 ];
 
 @NgModule({

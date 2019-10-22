@@ -8,15 +8,15 @@ import { SEARCH, DETAIL, RECOMENDED } from './global';
   providedIn: 'root'
 })
 export class SearchService {
-    public url: string;
-    public url2: string;
-    public url3: string;
+  public url: string;
+  public url2: string;
+  public url3: string;
 
 
-    constructor(private http: HttpClient) { 
-      this.url = SEARCH.url;
-      this.url2 = DETAIL.url;
-      this.url3 = RECOMENDED.url;
+  constructor(private http: HttpClient) {
+    this.url = SEARCH.url;
+    this.url2 = DETAIL.url;
+    this.url3 = RECOMENDED.url;
 
 
   }
@@ -25,38 +25,41 @@ export class SearchService {
   //YOUTUBE
   youtubeView(word): Observable<any> {
 
-    let headers = new HttpHeaders({ 'Content-Type': 'application/json',
-   
-            
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+
+
     });
 
-    return this.http.get(this.url+"&q="+ word + "&maxResults=5");
+    return this.http.get(this.url + "&q=" + word + "&maxResults=5");
 
-}
+  }
 
- //DETAIL
- detailView(id): Observable<any> {
+  //DETAIL
+  detailView(id): Observable<any> {
 
-  let headers = new HttpHeaders({ 'Content-Type': 'application/json',
- 
-          
-  });
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
 
-  return this.http.get(this.url2+"&id="+ id );
 
-}
+    });
 
- //RECOMENDED
- recomendedView(id): Observable<any> {
+    return this.http.get(this.url2 + "&id=" + id);
 
-  let headers = new HttpHeaders({ 'Content-Type': 'application/json',
- 
-          
-  });
+  }
 
-  return this.http.get(this.url3+"&relatedToVideoId="+ id+ "&maxResults=6");
+  //RECOMENDED
+  recomendedView(id): Observable<any> {
 
-}
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+
+
+    });
+
+    return this.http.get(this.url3 + "&relatedToVideoId=" + id + "&maxResults=6");
+
+  }
 
 
 }

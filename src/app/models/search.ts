@@ -1,7 +1,7 @@
 export class Youtube {
-    constructor (
-        public name : string 
-  
-    ){
+    constructor(
+        public name: string
+
+    ) {
     }
 }

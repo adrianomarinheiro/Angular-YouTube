@@ -21,6 +21,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { VideoComponent } from './components/video/video.component';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     HeaderComponent,
     SearchComponent,
     VideoComponent,
-    DomseguroPipe
+    DomseguroPipe,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

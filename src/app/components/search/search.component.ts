@@ -1,5 +1,5 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
-import {Youtube} from '../../models/search';
+import { Youtube } from '../../models/search';
 import { SearchService } from '../../services/search.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
@@ -10,15 +10,15 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
   public youtube: Youtube;
-  private dataLis =[];
+  private dataLis = [];
 
   constructor(
-  
+
     private _route: ActivatedRoute,
     private _router: Router,
     private _searchService: SearchService,
-   
-  ) { 
+
+  ) {
     this.youtube = new Youtube('');
 
   }
@@ -26,24 +26,24 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  ngDoCheck(){
+  ngDoCheck() {
     console.log(this.dataLis);
 
   }
 
 
-  onSubmit(youtubesearch){
+  onSubmit(youtubesearch) {
 
     this._searchService.youtubeView(youtubesearch).subscribe(
-        response=>{
-        
-         this.dataLis = response.items;
-         
-         
-        }, 
-        error =>{
-          console.log(<any>error);
-        }
+      response => {
+
+        this.dataLis = response.items;
+
+
+      },
+      error => {
+        console.log(<any>error);
+      }
     );
 
   }

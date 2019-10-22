@@ -1,62 +1,71 @@
 <div>
-    <app-header></app-header>
+  <app-header></app-header>
 </div>
-  
-  <!-- Sidebar navigation -->
-  <div class="container-fluid">
-    <div class="row">
-  
-      <nav class="col-md-2 d-md-block sidebar">
-        <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active">
-                <i class="fas fa-user"></i>Perfil
-              </a>
-            </li>
-            <!-- Calling SignOut() Api from AuthService -->
-            <li class="nav-item">
-              <a class="nav-link" (click)="authService.SignOut()">
-                <i class="fas fa-sign-out-alt"></i>Sair
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-  
-      <!-- Main content -->
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="inner-adjust">
-  
-          <div class="pt-3 pb-2 mb-3 border-bottom">
-            <div class="row" *ngIf="authService.userData as user">
-              <div class="col-md-12">
-                <div class="media">
-                  <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="../../../assets/img/dummy-user.png"
-                    alt="{{user.displayName}}">
-                  <div class="media-body">
-                    <h1>Olá: <strong>{{(user.displayName) ? user.displayName : user.email }}</strong></h1>
-                    <p class="intro">A pesquisa abaixo é a maneira mais rápida de você conhecer os 5 principais vídeos por tema pesquisado no YouTube.</p>
-                    <p class="intro"> Clique sobre a imagem para visualizar o vídeo sem sair dos resultados. Se deseja ler mais detalhes e assistir o vídeo em um frame maior clique sobre as informações do vídeo</p> 
-                    <p class="intro">Divirta-se!</p>
-                  </div>
+
+<!--Spinner-->
+<ngx-spinner bdColor="rgba(51,51,51,0.9)" size="medium" color="#bb0000" type="ball-atom">
+  <p style="font-size: 20px; color: #bdbdbd; font-weight: bold; letter-spacing: 2px; text-transform: uppercase;">
+    Carregando...</p>
+</ngx-spinner>
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+  <div class="row">
+
+    <nav class="col-md-2 d-md-block sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active">
+              <i class="fas fa-user"></i>Perfil
+            </a>
+          </li>
+          <!-- Calling SignOut() Api from AuthService -->
+          <li class="nav-item">
+            <a class="nav-link" (click)="authService.SignOut()">
+              <i class="fas fa-sign-out-alt"></i>Sair
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
+
+        <div class="pt-3 pb-2 mb-3 border-bottom">
+          <div class="row" *ngIf="authService.userData as user">
+            <div class="col-md-12">
+              <div class="media">
+                <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="../../../assets/img/dummy-user.png"
+                  alt="{{user.displayName}}">
+                <div class="media-body">
+                  <h1>Olá: <strong>{{(user.displayName) ? user.displayName : user.email }}</strong></h1>
+                  <p class="intro">A pesquisa abaixo é a maneira mais rápida de você conhecer os 5 principais vídeos por
+                    tema pesquisado no YouTube.</p>
+                  <p class="intro"> Clique sobre a imagem para visualizar o vídeo sem sair dos resultados. Se deseja ler
+                    mais detalhes e assistir o vídeo em um frame maior clique sobre as informações do vídeo</p>
+                  <p class="intro">Divirta-se!</p>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Show user data when logged in -->
-          <div>
-            <app-search></app-search>
-          </div>
-         
-  
         </div>
-        <div class="tutorial col-md-12">
-          <p>Você pode adicionar essa PWA à sua tela inicial do celular e tornar seu acesso ainda mais rápido</p>
-          <p><strong>iOS:</strong> Clique em <img src="../../../assets/img/shareapple.png">. No menu que vai abrir deslize um pouco para cima e clique em Adicionar à Tela de Início</p>
-          <p><strong>Android:</strong> Clique em <i class="fas fa-ellipsis-v"></i> e nas opções selecione Adicionar à Tela de Início.</p>
+        <!-- Show user data when logged in -->
+        <div>
+          <app-search></app-search>
         </div>
-      </main>
-  
-    </div>
+
+
+      </div>
+      <div class="tutorial col-md-12">
+        <p>Você pode adicionar essa PWA à sua tela inicial do celular e tornar seu acesso ainda mais rápido</p>
+        <p><strong>iOS:</strong> Clique em <img src="../../../assets/img/shareapple.png">. No menu que vai abrir deslize
+          um pouco para cima e clique em Adicionar à Tela de Início</p>
+        <p><strong>Android:</strong> Clique em <i class="fas fa-ellipsis-v"></i> e nas opções selecione Adicionar à Tela
+          de Início.</p>
+      </div>
+    </main>
+
   </div>
+</div>
