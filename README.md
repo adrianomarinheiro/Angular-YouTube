@@ -1,5 +1,7 @@
 # AngularYoutube
 
+(https://angular-3ef70.firebaseapp.com/assets/img/angulartube.png)
+
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 8.3.6.
 
 ## CASO DESEJE RODAR ESSE PROJETO EM SUA MÁQUINA DESDE O REPOSITÓRIO
@@ -32,7 +34,17 @@ No terminal, dentro do repositório local do projeto, rode o comando `ng build` 
 
 ## Este projeto está disponível no seguinte endereço:
 
-* https://angular-3ef70.firebaseapp.com 
+  (https://angular-3ef70.firebaseapp.com) 
+
+### AO ACESSAR O PROJETO:
+
+* Tenha em mente que você está acessando pela página de Login, se ainda não possui cadastro vá até a parte inferior da página e veja o link para REGISTRE-SE, fora do quadro cinza claro.
+
+* Na nova tela realize o cadastro. Após a realização do mesmo você verá uma mensagem na tela que te orienta a acessar o e-mail e clicar no link de confirmação. **Sem isso você não conseguirá realizar o login**
+
+* Após realizar a confirmação do e-mail no link enviado, dirija-se à página inicial e acesse a PWA com API do Youtube.
+
+## DIVIRTA-SE ##
 
 ## OBRIGADO POR VISITAR O PROJETO
 
