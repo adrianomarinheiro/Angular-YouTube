@@ -1,6 +1,6 @@
 # AngularYoutube
 
-(https://angular-3ef70.firebaseapp.com/assets/img/angulartube.png)
+![** BEM-VINDO **](https://angular-3ef70.firebaseapp.com/assets/img/angulartube.png)
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 8.3.6.
 
