@@ -32,7 +32,7 @@ No terminal, dentro do repositório local do projeto, rode o comando `ng build` 
 
 ## Este projeto está disponível no seguinte endereço:
 
-
+* https://angular-3ef70.firebaseapp.com 
 
 ## OBRIGADO POR VISITAR O PROJETO
 

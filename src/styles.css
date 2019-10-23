@@ -13,6 +13,8 @@ body {
     width: 100%;
     height: auto;
     font-family: 'Poppins', sans-serif;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
 }
 
 .feather {
@@ -62,7 +64,7 @@ h6 {
 .media-body p {
     margin-bottom: 10px;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14px;
     ;
 }
 
@@ -369,6 +371,7 @@ a:not([href]):not([tabindex]):hover {
 .navbar-brand {
     padding-top: .5rem;
     padding-bottom: .5rem;
+    text-shadow: 1px 1px 1px #bb0000;
 }
 
 .navbar .form-control {
@@ -486,6 +489,7 @@ body .navbar-brand {
 
 .brand-logo {
     max-width: 50%;
+    max-height: -webkit-fill-available;
 }
 
 .pt-3,
@@ -769,6 +773,7 @@ body .table thead th {
     .navbar-dark .navbar-brand {
         margin: 0;
         width: 50%;
+        height: -webkit-fill-available;
         float: left;
         display: inherit;
     }

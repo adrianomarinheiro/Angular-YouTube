@@ -2,6 +2,8 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { AuthService } from "../../shared/services/auth.service";
 import { Router } from "@angular/router";
 import { NgxSpinnerService } from "ngx-spinner";
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -11,6 +13,8 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class DashboardComponent implements OnInit {
 
+  faUser = faUser;
+  faSignOutAlt = faSignOutAlt;
   constructor(
     public authService: AuthService,
     public router: Router,

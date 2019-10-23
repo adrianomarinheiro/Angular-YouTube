@@ -23,6 +23,7 @@ import { VideoComponent } from './components/video/video.component';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     AngularFireAuthModule,
     AngularFirestoreModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    FontAwesomeModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

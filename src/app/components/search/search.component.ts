@@ -10,7 +10,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
   public youtube: Youtube;
-  private dataLis = [];
+  public dataLis = [];
 
   constructor(
 

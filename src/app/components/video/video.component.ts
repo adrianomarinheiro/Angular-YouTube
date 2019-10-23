@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SearchService } from '../../services/search.service';
 import { NgxSpinnerService } from "ngx-spinner";
+import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -10,8 +11,9 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class VideoComponent implements OnInit {
 
+    faChevronCircleLeft =faChevronCircleLeft;
     video: any = {};
-    private recomend = {};
+    public recomend = {};
     constructor(private activatedRoute: ActivatedRoute,
         private _searchService: SearchService,
         private spinner: NgxSpinnerService
